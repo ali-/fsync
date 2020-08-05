@@ -29,7 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	// Refresh menu bar
 	func updateMenu() {
 		statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.variableLength)
-		statusItem.button?.image = NSImage(named: NSImage.Name("AppIcon"))
+		statusItem.button?.image = NSImage(named: NSImage.folderName)
 		statusItem.button?.image?.size = NSSize(width: 20, height: 20)
 		statusItem.button?.font = NSFont.systemFont(ofSize: 22)
 		statusItem.length = 32
@@ -77,7 +77,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	// Directory select action
 	@objc func actionAbout(_ sender: Any?) {
 		let alert = NSAlert()
-		let info = "Version 0.1" + "\n" + "Compiled: July 4, 2020" + "\n" + "Icon: kiranshastry"
+		let info = "Version 0.1"
 		alert.messageText = "About"
 		alert.icon = nil
 		alert.informativeText =	(info)
